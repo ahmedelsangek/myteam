@@ -733,7 +733,6 @@ header.home-header .container div p::before {
   position: absolute;
   bottom: -1.4%;
   left: 10%;
-  width: 100%;
 }
 
 @media (max-width: 1600px) {
