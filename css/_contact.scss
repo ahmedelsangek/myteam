@@ -1,0 +1,118 @@
+section {
+  &.our-contact {
+    margin: 120px 0 570px;
+    position: relative;
+    .container {
+      &::before {
+        content: url("../images/bg-pattern-about-2-contact-1.svg");
+        position: absolute;
+        left: 5%;
+        @media (max-width: 1600px) {
+          display: none;
+        }
+      }
+      &::after {
+        content: url("../images/bg-pattern-contact-2.svg");
+        position: absolute;
+        right: 5%;
+        bottom: -24%;
+        @media (max-width: 1600px) {
+          display: none;
+        }
+      }
+      .contact {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 992px) {
+          flex-direction: column;
+          align-items: center;
+        }
+        .ask-us {
+          @media (max-width: 992px) {
+            margin-bottom: 64px;
+            width: 100%;
+          }
+          div {
+            &:first-of-type {
+              h1 {
+                font-size: 64px;
+                @media (max-width: 992px) {
+                  text-align: center;
+                }
+              }
+              h3 {
+                font-size: 32px;
+                color: $color-light-coral;
+                margin: 24px 0;
+              }
+            }
+            &:last-of-type {
+              .ask {
+                display: flex;
+                align-items: center;
+                &:not(:last-of-type) {
+                  margin-bottom: 10px;
+                }
+                img {
+                  margin-right: 20px;
+                }
+                p {
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+        .form {
+          width: 542px;
+          height: 420px;
+          @media (max-width: 992px) {
+            width: 100%;
+          }
+          form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            textarea {
+              height: 84px;
+              resize: none;
+            }
+            button {
+              @extend %btn;
+              background-color: $color-white;
+              color: $color-dark-green;
+              font-weight: $weight-bold;
+              letter-spacing: 0.4px;
+              @media (max-width: 992px) {
+                margin-top: 20px;
+              }
+              &:hover {
+                color: $color-rapture-blue;
+              }
+            }
+            input,
+            textarea {
+              width: 100%;
+              padding: 15px 0 15px 10px;
+              background: none;
+              border: none;
+              outline: none;
+              border-bottom: 1px solid $color-white;
+              transition: $transition;
+              color: $color-white;
+              font-size: 16px;
+              font-weight: $weight-bold;
+              &::placeholder {
+                color: #709ba0;
+              }
+              &:focus {
+                border-color: $color-rapture-blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
